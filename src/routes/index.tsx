@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { Section, Pill } from "@/components/Section";
 
-const TITLE = "Janet Agada — Product Manager · 0→1 Products";
+const TITLE = "Janet Agada · Product Manager · 0→1 Products";
 const DESCRIPTION =
-  "Product Manager specializing in 0→1 product development — I turn complex ideas into structured digital platforms.";
+  "Product Manager specializing in 0→1 product development, including AI-powered products. I turn complex ideas into structured digital platforms.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,14 +33,14 @@ const featured = [
     name: "Confette",
     category: "Marketplace",
     to: "/work/confette" as const,
-    line: "Nigeria's event-planning marketplace — a three-sided platform where organisers post budgets and verified vendors bid to win the work.",
+    line: "Nigeria's event-planning marketplace: a three-sided platform where organisers post budgets and verified vendors bid to win the work.",
     chips: ["Organiser · Vendor · Admin portals", "Full bidding lifecycle", "Live at confette.co"],
   },
   {
     name: "Glown",
     category: "Vertical SaaS",
     to: "/work/glown" as const,
-    line: "The operating system for a beauty business — booking, reviews, client marketing, multi-channel messaging, and staff payroll in one platform.",
+    line: "The operating system for a beauty business: booking, reviews, client marketing, multi-channel messaging, and staff payroll in one platform.",
     chips: ["15+ businesses live", "Booking → Payroll", "Live at glown.io"],
   },
 ];
@@ -72,12 +72,12 @@ const approach = [
   {
     n: "02",
     title: "Architect the Product System",
-    body: "I design the product as a complete system — not a list of features. Every component, workflow, module, and integration gets mapped before development begins. This is what prevents the chaos that kills most early-stage products.",
+    body: "I design the product as a complete system, not a list of features. Every component, workflow, module, and integration gets mapped before development begins. This is what prevents the chaos that kills most early-stage products.",
   },
   {
     n: "03",
     title: "Write Requirements That Build Right",
-    body: "I write product requirement documentation engineers can actually work from — clear user flows, feature specifications, logic rules, edge cases, and acceptance criteria. Good documentation is the difference between a team that ships and one that rebuilds.",
+    body: "I write product requirement documentation engineers can actually work from: clear user flows, feature specifications, logic rules, edge cases, and acceptance criteria. Good documentation is the difference between a team that ships and one that rebuilds.",
   },
   {
     n: "04",
@@ -87,7 +87,7 @@ const approach = [
   {
     n: "05",
     title: "Launch and Iterate",
-    body: "I manage the full launch — QA, go-live readiness, and the first iteration cycle. A product isn't done at launch. It's done when users are getting value from it and the data confirms it.",
+    body: "I manage the full launch: QA, go-live readiness, and the first iteration cycle. A product isn't done at launch. It's done when users are getting value from it and the data confirms it.",
   },
 ];
 
@@ -98,6 +98,9 @@ const tools = [
   "Trello",
   "Figma",
   "Lovable",
+  "Cursor",
+  "ChatGPT",
+  "Claude",
   "Magicpatterns",
   "Slack",
   "Discord",
@@ -107,13 +110,13 @@ const tools = [
 const testimonials = [
   {
     quote:
-      "Janet didn't just manage the project — she owned the product. Her documentation was so precise that our engineering team rarely needed clarification. That kind of clarity is rare.",
+      "Janet didn't just manage the project. She owned the product. Her documentation was so precise that our engineering team rarely needed clarification. That kind of clarity is rare.",
     name: "Babs Craig",
     role: "Optima AI (AI Document Processing Platform)",
   },
   {
     quote:
-      "Janet took Glown from an idea to a live platform. She structured everything — the booking logic, the service flows, the entire system — and coordinated the team to ship it. That level of ownership is hard to find.",
+      "Janet took Glown from an idea to a live platform. She structured everything (the booking logic, the service flows, the entire system) and coordinated the team to ship it. That level of ownership is hard to find.",
     name: "Bright Ikhide",
     role: "Glown (Beauty Booking Platform)",
   },
@@ -134,6 +137,11 @@ const benefits = [
     n: "III",
     title: "A PM accountable to outcomes, not just output",
     body: "I don't measure success by features shipped. I measure it by whether users are getting value, whether the platform is scaling, and whether the business is growing. I stay engaged until those things are true.",
+  },
+  {
+    n: "IV",
+    title: "A PM fluent in building with AI",
+    body: "I write clear PRDs for AI and LLM-powered features, and I use AI tools daily to prototype, pressure-test ideas, and ship faster. For me AI isn't a buzzword, it's how I shorten the distance between an idea and a working product.",
   },
 ];
 
@@ -159,9 +167,9 @@ function Index() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-                Product Manager specializing in 0→1 development — I define product systems,
-                structure workflows, and coordinate engineering teams to ship platforms that work,
-                scale, and grow.
+                Product Manager specializing in 0→1 development, including AI-powered products. I
+                define product systems, structure workflows, and coordinate engineering teams to
+                ship platforms that work, scale, and grow.
               </p>
             </Reveal>
             <Reveal delay={240}>
@@ -237,8 +245,8 @@ function Index() {
                 <Pill>Travel Platform</Pill>
                 <h3 className="mt-5 text-3xl font-semibold sm:text-4xl">Juyonna</h3>
                 <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground">
-                  A modular, multi-service travel ecosystem — 10+ service verticals unified into one
-                  scalable platform.
+                  A modular, multi-service travel ecosystem with 10+ service verticals unified into
+                  one scalable platform.
                 </p>
                 <p className="mt-7 text-sm text-muted-foreground">
                   Industry: Travel &amp; Logistics · Market: Nigeria + International · Stage: Phase 1
@@ -322,12 +330,12 @@ function Index() {
           <Reveal>
             <p className="max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
               My experience spans fast-moving startups across Nigeria and international teams. I've
-              architected multi-module platforms, launched 0→1 products, and delivered AI tooling. I
-              bring structure to ambiguity — and I know how to coordinate engineering teams to
-              execute without losing speed.
+              architected multi-module platforms, launched 0→1 products, and shipped AI-powered
+              tools. I bring structure to ambiguity, and I know how to coordinate engineering teams
+              to execute without losing speed.
             </p>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             {benefits.map((b, i) => (
               <Reveal key={b.n} delay={i * 80}>
                 <article className="h-full rounded-2xl border border-border bg-card p-7">

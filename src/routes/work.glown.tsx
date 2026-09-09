@@ -6,7 +6,7 @@ import {
   DecisionBlock,
 } from "@/components/CaseStudy";
 
-const TITLE = "Glown Case Study — Janet Agada, Product Manager";
+const TITLE = "Glown Case Study · Janet Agada, Product Manager";
 const DESCRIPTION =
   "How I grew Glown from a booking tool into the operating system for beauty businesses: reviews, segmentation, multi-channel messaging, and payroll.";
 
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/work/glown")({
 const modules = [
   {
     title: "Booking & Calendar",
-    body: "Structured appointments with services, staff assignment, and booking codes — the operational core everything else hangs off.",
+    body: "Structured appointments with services, staff assignment, and booking codes. The operational core everything else hangs off.",
   },
   {
     title: "Reviews",
@@ -37,11 +37,11 @@ const modules = [
   },
   {
     title: "Message Log",
-    body: "Every SMS, WhatsApp, and email the business sends, with per-message delivery tracking across channels — so businesses can trust that review requests and campaigns actually land.",
+    body: "Every SMS, WhatsApp, and email the business sends, with per-message delivery tracking across channels, so businesses can trust that review requests and campaigns actually land.",
   },
   {
     title: "Payroll",
-    body: "Staff earnings built from commission on each completed booking, plus salary, allowances, and deductions, run through a generate → draft → approve workflow. Monthly payroll on the platform has ranged from ₦568K to ₦3.2M gross across live months — connecting the operational side (bookings) directly to the financial side (pay).",
+    body: "Staff earnings built from commission on each completed booking, plus salary, allowances, and deductions, run through a generate → draft → approve workflow. Monthly payroll on the platform has ranged from ₦568K to ₦3.2M gross across live months, connecting the operational side (bookings) directly to the financial side (pay).",
   },
 ];
 
@@ -54,7 +54,7 @@ const decisions = [
   {
     n: "2",
     title: "Segmentation around real money",
-    body: "The marketing module is built on the segments that actually drive revenue — lapsed clients, repeat no-shows, best clients — so it produces rebookings, not newsletters.",
+    body: "The marketing module is built on the segments that actually drive revenue (lapsed clients, repeat no-shows, best clients), so it produces rebookings, not newsletters.",
   },
   {
     n: "3",
@@ -76,7 +76,7 @@ function GlownPage() {
         <Prose>
           Glown is a booking and business-management platform for beauty professionals. It began as
           a structured booking tool; I've since expanded it into the operating system a salon
-          actually runs on — reviews, client marketing, multi-channel messaging, and staff payroll,
+          actually runs on: reviews, client marketing, multi-channel messaging, and staff payroll,
           all in one platform. Live at glown.io.
         </Prose>
       </CaseSection>
@@ -86,7 +86,7 @@ function GlownPage() {
           Salons and independent beauty pros run on paper diaries and WhatsApp threads. Bookings
           clash, no-shows go untracked, staff pay is calculated by hand every month, and there's no
           structured way to win back the clients who quietly stop coming. Each of those is a leak in
-          the business — and the fix isn't one feature, it's a connected system.
+          the business, and the fix isn't one feature, it's a connected system.
         </Prose>
       </CaseSection>
 
@@ -110,14 +110,14 @@ function GlownPage() {
         <Prose>
           15+ beauty businesses live on the platform. The flagship salon manages 388 clients, runs
           monthly payroll in the millions of naira, and sends automated multi-channel client
-          communications — all inside Glown. Live since February 2026.
+          communications, all inside Glown. Live since February 2026.
         </Prose>
       </CaseSection>
 
       <CaseSection heading="What this demonstrates">
         <Prose>
           Taking a product from a single-purpose tool to a multi-module platform without losing
-          coherence — and understanding a business deeply enough to connect its operations to its
+          coherence, and understanding a business deeply enough to connect its operations to its
           money.
         </Prose>
       </CaseSection>

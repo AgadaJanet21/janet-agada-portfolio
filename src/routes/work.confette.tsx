@@ -6,7 +6,7 @@ import {
   DecisionBlock,
 } from "@/components/CaseStudy";
 
-const TITLE = "Confette Case Study — Janet Agada, Product Manager";
+const TITLE = "Confette Case Study · Janet Agada, Product Manager";
 const DESCRIPTION =
   "How I architected Confette, Nigeria's three-sided event-planning marketplace: budget-first planning, a bidding lifecycle state machine, and vendor trust cascades.";
 
@@ -41,7 +41,7 @@ const decisions = [
   {
     n: "4",
     title: "Trust & safety via vendor verification",
-    body: "Admins verify, reject, suspend, and reinstate vendors. Suspension cascades correctly: the vendor's active bids move to on-hold, any booked categories reopen, and affected organisers are notified. Reinstatement then restores bids only where the slot is still open, and rejects the rest. Designing these cascades — so no organiser is ever left with a silently-removed vendor — was the hardest part of the product.",
+    body: "Admins verify, reject, suspend, and reinstate vendors. Suspension cascades correctly: the vendor's active bids move to on-hold, any booked categories reopen, and affected organisers are notified. Reinstatement then restores bids only where the slot is still open, and rejects the rest. Designing these cascades, so no organiser is ever left with a silently-removed vendor, was the hardest part of the product.",
   },
   {
     n: "5",
@@ -51,7 +51,7 @@ const decisions = [
   {
     n: "6",
     title: "Seeding a cold marketplace",
-    body: "Organisers can invite specific verified vendors to bid, and share a public event link with anyone — even people without an account — to pull in bids and grow liquidity.",
+    body: "Organisers can invite specific verified vendors to bid, and share a public event link with anyone, even people without an account, to pull in bids and grow liquidity.",
   },
 ];
 
@@ -69,7 +69,7 @@ function ConfettePage() {
           Confette is Nigeria's event-planning marketplace. It connects the people throwing events
           with the people who make them happen: organisers post an event and a budget, split that
           budget across service categories, and receive competitive bids from verified vendors. I
-          owned the product end to end — problem definition, system architecture, requirement
+          owned the product end to end: problem definition, system architecture, requirement
           documentation, engineering coordination, and launch.
         </Prose>
       </CaseSection>
@@ -79,7 +79,7 @@ function ConfettePage() {
           Planning an event in Nigeria means chasing vendors across WhatsApp and Instagram with no
           price transparency, no trust signals, and no structure. Vendors, in turn, have no reliable
           channel to discover events they're qualified to bid on. The two hardest things to build in
-          this market are money-handling and trust — so those are exactly what the product had to
+          this market are money-handling and trust, so those are exactly what the product had to
           solve.
         </Prose>
       </CaseSection>
@@ -103,8 +103,8 @@ function ConfettePage() {
 
       <CaseSection heading="What this demonstrates">
         <Prose>
-          End-to-end ownership of a complex, stateful, multi-role product. The systems thinking here
-          — modelling every state, guard, and cascade before a line of code — is what separates a PM
+          End-to-end ownership of a complex, stateful, multi-role product. The systems thinking here,
+          modelling every state, guard, and cascade before a line of code, is what separates a PM
           who ships from one who just writes tickets.
         </Prose>
       </CaseSection>
