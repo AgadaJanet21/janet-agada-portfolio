@@ -23,17 +23,15 @@ const args = new Set(process.argv.slice(2));
 // EDIT these URLs to match your live pages. Each is captured at 2x resolution.
 // `fullPage: true` grabs the whole scrollable page instead of just the window.
 const shots = [
-  { file: "glown-overview.png", url: "https://app.glown.io/overview", settle: 6000 },
-  { file: "glown-reviews.png", url: "https://app.glown.io/reviews" },
-  { file: "glown-marketing.png", url: "https://app.glown.io/marketing" },
-  { file: "glown-payroll.png", url: "https://app.glown.io/payments?tab=staff_earnings" },
-  // If Analytics lives at a different path, fix this URL (it's the "View analytics" link on the dashboard):
-  { file: "glown-analytics.png", url: "https://app.glown.io/analytics", settle: 6000 },
-
-  // CONFETTE: these render only if you're logged in as the ADMIN account
-  // (events@confette.co) — NOT the organiser account.
+  // The Glown case-study shots are already done. The only auto-captures left are
+  // Confette's — and they render ONLY if you're logged in as the ADMIN account
+  // (events@confette.co), NOT the organiser account.
   { file: "confette-admin.png", url: "https://confette.co/admin/dashboard" },
   { file: "confette-vendors.png", url: "https://confette.co/admin/vendors" },
+
+  // Snap-only (need clicks) — capture with `npm run shots:snap`, date set to LAST MONTH:
+  //   glown-analytics.png            (Analytics → Last month → "Revenue & Sales" tab)
+  //   glown-analytics-services.png   (Analytics → Last month → "Services" tab)
 
   // Best captured with `npm run shots:snap` — navigate to the exact view (a
   // specific event's budget, or a pop-up modal) in the browser, then type the name:
