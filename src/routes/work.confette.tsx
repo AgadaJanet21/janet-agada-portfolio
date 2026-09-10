@@ -5,6 +5,7 @@ import {
   Prose,
   DecisionBlock,
 } from "@/components/CaseStudy";
+import { Shot } from "@/components/Shot";
 
 const TITLE = "Confette Case Study · Janet Agada, Product Manager";
 const DESCRIPTION =
@@ -64,6 +65,12 @@ function ConfettePage() {
       liveHref="https://confette.co"
       meta="Role: Product Manager & Product Architect · Market: Nigeria · Roles served: Organiser, Vendor, Admin · Stage: Live"
     >
+      <Shot
+        src="/shots/confette-admin.png"
+        alt="Confette admin dashboard showing total events, live events, total bids, and vendors, with a recent events list."
+        caption="The admin portal: platform oversight across events, bids, and vendors."
+      />
+
       <CaseSection heading="Overview">
         <Prose>
           Confette is Nigeria's event-planning marketplace. It connects the people throwing events
@@ -90,6 +97,19 @@ function ConfettePage() {
             {d.body}
           </DecisionBlock>
         ))}
+      </CaseSection>
+
+      <CaseSection heading="Inside the product">
+        <Shot
+          src="/shots/confette-budget.png"
+          alt="Confette budget breakdown showing an organiser's total budget split across service categories with allocation bars."
+          caption="Budget-first planning: a total budget split across categories with a live allocation bar."
+        />
+        <Shot
+          src="/shots/confette-events.png"
+          alt="Confette all-events list showing events with budgets and statuses such as draft, open, and bidding."
+          caption="Every event and its status across the bidding lifecycle: Draft, Open, Bidding, and more."
+        />
       </CaseSection>
 
       <CaseSection heading="Outcome">

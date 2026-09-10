@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUpRight, Mail } from "lucide-react";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
+import { CountUp } from "@/components/CountUp";
 import { Section, Pill } from "@/components/Section";
 
 const TITLE = "Janet Agada · Product Manager · 0→1 Products";
@@ -211,7 +212,9 @@ function Index() {
           <div className="container-editorial grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 70}>
-                <p className="font-display text-4xl font-semibold sm:text-5xl">{s.value}</p>
+                <p className="font-display text-4xl font-semibold sm:text-5xl">
+                  <CountUp value={s.value} />
+                </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   {s.label}
                 </p>
@@ -252,7 +255,9 @@ function Index() {
                       <div className="grid grid-cols-3 gap-6 md:mt-auto md:flex md:flex-col md:gap-5 md:text-right">
                         {c.stats.map((s) => (
                           <div key={s.l}>
-                            <p className="font-display text-2xl font-semibold sm:text-3xl">{s.v}</p>
+                            <p className="font-display text-2xl font-semibold sm:text-3xl">
+                              <CountUp value={s.v} />
+                            </p>
                             <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
                               {s.l}
                             </p>
@@ -282,7 +287,9 @@ function Index() {
                   </div>
                   <div className="grid grid-cols-2 gap-6 border-t border-border pt-6 md:flex md:flex-col md:gap-5 md:border-l md:border-t-0 md:pl-10 md:pt-0 md:text-right">
                     <div>
-                      <p className="font-display text-2xl font-semibold sm:text-3xl">10+</p>
+                      <p className="font-display text-2xl font-semibold sm:text-3xl">
+                        <CountUp value="10+" />
+                      </p>
                       <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
                         Service verticals
                       </p>
