@@ -101,11 +101,6 @@ function ConfettePage() {
 
       <CaseSection heading="Inside the product">
         <Shot
-          src="/shots/confette-budget.png"
-          alt="Confette budget breakdown showing an organiser's total budget split across service categories with allocation bars."
-          caption="Budget-first planning: a total budget split across categories with a live allocation bar."
-        />
-        <Shot
           src="/shots/confette-events.png"
           alt="Confette all-events list showing events with budgets and statuses such as draft, open, and bidding."
           caption="Every event and its status across the bidding lifecycle: Draft, Open, Bidding, and more."
