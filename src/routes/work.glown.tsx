@@ -126,6 +126,11 @@ function GlownPage() {
           alt="Glown analytics page showing revenue, net to business, top payment channel, VAT collected, and a channel breakdown."
           caption="Analytics: revenue, net, payment-channel mix, and VAT at a glance, so the business runs on numbers."
         />
+        <Shot
+          src="/shots/glown-analytics-services.png"
+          alt="Glown service analytics showing services booked, repeat rate, new clients, typical time to rebook, and a weekly booking-frequency chart."
+          caption="Service analytics: booking frequency, repeat rate, and which services win new clients versus keep them coming back."
+        />
       </CaseSection>
 
       <CaseSection heading="Key decisions">
