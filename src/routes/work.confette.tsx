@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Fragment } from "react";
+import { ArrowRight } from "lucide-react";
 import {
   CaseStudyLayout,
   CaseSection,
@@ -97,6 +99,38 @@ function ConfettePage() {
             {d.body}
           </DecisionBlock>
         ))}
+      </CaseSection>
+
+      <CaseSection heading="The lifecycle I modelled">
+        <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <div className="overflow-x-auto pb-2">
+            <div className="flex min-w-max items-center gap-3">
+              {["Draft", "Open", "Bidding", "Vendors Booked", "Completed"].map((s, i, arr) => (
+                <Fragment key={s}>
+                  <span className="whitespace-nowrap rounded-xl border border-border bg-background px-4 py-2.5 text-sm font-medium">
+                    {s}
+                  </span>
+                  {i < arr.length - 1 && (
+                    <ArrowRight className="size-4 shrink-0 text-primary" aria-hidden />
+                  )}
+                </Fragment>
+              ))}
+            </div>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-border pt-5 text-sm text-muted-foreground">
+            <span className="rounded-xl border border-sand/40 bg-sand/10 px-3 py-1.5 font-medium text-sand">
+              Disputed
+            </span>
+            <span>
+              an admin-review branch any active event can drop into, then rejoin the flow or resolve.
+            </span>
+          </div>
+          <p className="mt-5 text-sm leading-7 text-muted-foreground">
+            Every transition fires its own guards and notifications. I specified each state, its
+            entry conditions, and its edge cases, so the engineering team could build it without
+            ambiguity.
+          </p>
+        </div>
       </CaseSection>
 
       <CaseSection heading="Inside the product">
