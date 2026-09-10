@@ -107,29 +107,14 @@ function GlownPage() {
 
       <CaseSection heading="Inside the product">
         <Shot
-          src="/shots/glown-reviews.png"
-          alt="Glown reviews page showing client reviews with per-staff star ratings."
-          caption="Reviews: per-staff star ratings, published to build the salon's reputation."
-        />
-        <Shot
           src="/shots/glown-marketing.png"
           alt="Glown marketing page showing client segments such as slipping away, best clients, and repeat no-shows."
           caption="Marketing: the client book segmented into 'Slipping away', 'Best clients', 'Repeat no-shows', and more."
         />
         <Shot
-          src="/shots/glown-messages.png"
-          alt="Glown message log showing SMS and WhatsApp messages with delivery status."
-          caption="Message log: every SMS, WhatsApp, and email, with per-channel delivery tracking."
-        />
-        <Shot
           src="/shots/glown-payroll.png"
           alt="Glown payroll page showing monthly payroll totals with gross, deductions, and net."
           caption="Payroll: monthly runs built from per-booking commission, plus salary, allowances, and deductions."
-        />
-        <Shot
-          src="/shots/glown-payroll-detail.png"
-          alt="Glown salary breakdown for a single month showing each staff member's gross, salary, commission, allowances, deductions, and net total."
-          caption="Inside a run: every staff member's gross broken into salary, commission, allowances, and deductions."
         />
         <Shot
           src="/shots/glown-commission.png"
