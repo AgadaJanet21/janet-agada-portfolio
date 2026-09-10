@@ -73,6 +73,12 @@ function GlownPage() {
       liveHref="https://glown.io"
       meta="Role: Product Manager (built from zero) · Market: Nigeria · Stage: Live & expanding"
     >
+      <Shot
+        src="/shots/glown-overview.png"
+        alt="Glown business dashboard showing today's appointments, revenue, and this month's bookings and new clients."
+        caption="The Glown dashboard: a salon's day and month at a glance."
+      />
+
       <CaseSection heading="Overview">
         <Prose>
           Glown is a booking and business-management platform for beauty professionals. It began as
@@ -101,6 +107,11 @@ function GlownPage() {
 
       <CaseSection heading="Inside the product">
         <Shot
+          src="/shots/glown-reviews.png"
+          alt="Glown reviews page showing a 4.8-star average with a rating breakdown and published client reviews."
+          caption="Reviews: a 4.8-star average with per-staff ratings, published to build the salon's reputation."
+        />
+        <Shot
           src="/shots/glown-marketing.png"
           alt="Glown marketing page showing client segments such as slipping away, best clients, and repeat no-shows."
           caption="Marketing: the client book segmented into 'Slipping away', 'Best clients', 'Repeat no-shows', and more."
@@ -109,6 +120,11 @@ function GlownPage() {
           src="/shots/glown-payroll.png"
           alt="Glown payroll page showing monthly payroll totals with gross, deductions, and net."
           caption="Payroll: monthly runs built from per-booking commission, plus salary, allowances, and deductions."
+        />
+        <Shot
+          src="/shots/glown-analytics.png"
+          alt="Glown analytics page showing revenue, net to business, top payment channel, VAT collected, and a channel breakdown."
+          caption="Analytics: revenue, net, payment-channel mix, and VAT at a glance, so the business runs on numbers."
         />
       </CaseSection>
 
