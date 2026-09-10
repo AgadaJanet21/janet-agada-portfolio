@@ -177,9 +177,9 @@ function Index() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-                Product Manager specializing in 0→1 development, including AI-powered products. I
-                define product systems, structure workflows, and coordinate engineering teams to
-                ship platforms that work, scale, and grow.
+                0→1 Product Manager. I've shipped 6 products across 6 industries, including a live
+                event marketplace, a beauty-business operating system that runs real payroll, and AI
+                tooling, turning ambiguous ideas into platforms that ship and scale.
               </p>
             </Reveal>
             <Reveal delay={240}>
