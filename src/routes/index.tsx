@@ -123,13 +123,13 @@ const testimonials = [
     quote:
       "Janet didn't just manage the project. She owned the product. Her documentation was so precise that our engineering team rarely needed clarification. That kind of clarity is rare.",
     name: "Babs Craig",
-    role: "Optima AI (AI Document Processing Platform)",
+    role: "Head of Engineering, Optima AI",
   },
   {
     quote:
       "Janet took Glown from an idea to a live platform. She structured everything (the booking logic, the service flows, the entire system) and coordinated the team to ship it. That level of ownership is hard to find.",
     name: "Bright Ikhide",
-    role: "Glown (Beauty Booking Platform)",
+    role: "Co-Founder, Glown",
   },
 ];
 
