@@ -18,7 +18,10 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || typeof IntersectionObserver === "undefined") {
       setShown(true);
       return;
     }
@@ -31,7 +34,7 @@ export function Reveal({
           }
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0.1, rootMargin: "0px 0px -120px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -43,10 +46,10 @@ export function Reveal({
       style={{
         transitionDelay: `${delay}ms`,
         transitionProperty: "opacity, transform",
-        transitionDuration: "700ms",
+        transitionDuration: "800ms",
         transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
         opacity: shown ? 1 : 0,
-        transform: shown ? "none" : "translateY(18px)",
+        transform: shown ? "none" : "translateY(28px)",
       }}
       className={cn(className)}
     >

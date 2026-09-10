@@ -33,15 +33,25 @@ const featured = [
     name: "Confette",
     category: "Marketplace",
     to: "/work/confette" as const,
-    line: "Nigeria's event-planning marketplace: a three-sided platform where organisers post budgets and verified vendors bid to win the work.",
+    line: "Nigeria's event-planning marketplace: a three-sided platform where organisers post a budget, split it across service categories, and receive competitive bids from verified vendors.",
     chips: ["Organiser · Vendor · Admin portals", "Full bidding lifecycle", "Live at confette.co"],
+    stats: [
+      { v: "3", l: "Portals" },
+      { v: "6", l: "Lifecycle states" },
+      { v: "Live", l: "In market" },
+    ],
   },
   {
     name: "Glown",
     category: "Vertical SaaS",
     to: "/work/glown" as const,
-    line: "The operating system for a beauty business: booking, reviews, client marketing, multi-channel messaging, and staff payroll in one platform.",
+    line: "The operating system for a beauty business: booking, reviews, client marketing, multi-channel messaging, and staff payroll, unified in one platform.",
     chips: ["15+ businesses live", "Booking → Payroll", "Live at glown.io"],
+    stats: [
+      { v: "5", l: "Modules" },
+      { v: "388", l: "Clients managed" },
+      { v: "₦3.2M", l: "Monthly payroll" },
+    ],
   },
 ];
 
@@ -214,44 +224,77 @@ function Index() {
         <Section id="work" eyebrow="Case studies" title="Selected Work">
           <div className="space-y-6">
             {featured.map((c, i) => (
-              <Reveal key={c.name} delay={i * 80}>
+              <Reveal key={c.name} delay={i * 90}>
                 <Link
                   to={c.to}
-                  className="group block rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift sm:p-10"
+                  className="group block rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-lift sm:p-10"
                 >
-                  <div className="flex items-start justify-between gap-6">
+                  <div className="grid gap-8 md:grid-cols-[1fr_15rem] md:gap-12">
                     <div>
-                      <Pill>{c.category}</Pill>
+                      <div className="flex items-center justify-between gap-4">
+                        <Pill>{c.category}</Pill>
+                        <ArrowUpRight className="size-6 shrink-0 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary md:hidden" />
+                      </div>
                       <h3 className="mt-5 text-3xl font-semibold sm:text-4xl">{c.name}</h3>
+                      <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
+                        {c.line}
+                      </p>
+                      <div className="mt-7 flex flex-wrap gap-2">
+                        {c.chips.map((chip) => (
+                          <Pill key={chip} tone="muted">
+                            {chip}
+                          </Pill>
+                        ))}
+                      </div>
                     </div>
-                    <ArrowUpRight className="size-6 shrink-0 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary" />
-                  </div>
-                  <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground">
-                    {c.line}
-                  </p>
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {c.chips.map((chip) => (
-                      <Pill key={chip} tone="muted">
-                        {chip}
-                      </Pill>
-                    ))}
+                    <div className="flex flex-col gap-6 border-t border-border pt-6 md:items-end md:border-l md:border-t-0 md:pl-10 md:pt-0">
+                      <ArrowUpRight className="hidden size-6 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary md:block" />
+                      <div className="grid grid-cols-3 gap-6 md:mt-auto md:flex md:flex-col md:gap-5 md:text-right">
+                        {c.stats.map((s) => (
+                          <div key={s.l}>
+                            <p className="font-display text-2xl font-semibold sm:text-3xl">{s.v}</p>
+                            <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                              {s.l}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </Link>
               </Reveal>
             ))}
 
-            <Reveal delay={160}>
+            <Reveal delay={180}>
               <article className="rounded-2xl border border-border bg-card p-7 sm:p-10">
-                <Pill>Travel Platform</Pill>
-                <h3 className="mt-5 text-3xl font-semibold sm:text-4xl">Juyonna</h3>
-                <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground">
-                  A modular, multi-service travel ecosystem with 10+ service verticals unified into
-                  one scalable platform.
-                </p>
-                <p className="mt-7 text-sm text-muted-foreground">
-                  Industry: Travel &amp; Logistics · Market: Nigeria + International · Stage: Phase 1
-                  complete, awaiting launch.
-                </p>
+                <div className="grid gap-8 md:grid-cols-[1fr_15rem] md:gap-12">
+                  <div>
+                    <Pill>Travel Platform</Pill>
+                    <h3 className="mt-5 text-3xl font-semibold sm:text-4xl">Juyonna</h3>
+                    <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
+                      A modular, multi-service travel ecosystem with 10+ service verticals unified
+                      into one scalable platform.
+                    </p>
+                    <p className="mt-7 text-sm text-muted-foreground">
+                      Industry: Travel &amp; Logistics · Market: Nigeria + International · Stage:
+                      Phase 1 complete, awaiting launch.
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-6 border-t border-border pt-6 md:flex md:flex-col md:gap-5 md:border-l md:border-t-0 md:pl-10 md:pt-0 md:text-right">
+                    <div>
+                      <p className="font-display text-2xl font-semibold sm:text-3xl">10+</p>
+                      <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                        Service verticals
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-display text-2xl font-semibold sm:text-3xl">Phase 1</p>
+                      <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                        Complete
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </article>
             </Reveal>
           </div>
