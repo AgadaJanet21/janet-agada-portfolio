@@ -26,14 +26,14 @@ const shots = [
   { file: "glown-overview.png", url: "https://app.glown.io/overview", settle: 6000 },
   { file: "glown-reviews.png", url: "https://app.glown.io/reviews" },
   { file: "glown-marketing.png", url: "https://app.glown.io/marketing" },
-  { file: "glown-messages.png", url: "https://app.glown.io/messages" },
   { file: "glown-payroll.png", url: "https://app.glown.io/payments?tab=staff_earnings" },
+  // If Analytics lives at a different path, fix this URL (it's the "View analytics" link on the dashboard):
+  { file: "glown-analytics.png", url: "https://app.glown.io/analytics", settle: 6000 },
 
-  // CONFETTE: the admin dashboard + all-events list only render if you are logged
-  // in as the ADMIN account (events@confette.co) — NOT the organiser account.
-  // Logged in as an organiser, these redirect to the empty organiser home.
+  // CONFETTE: these render only if you're logged in as the ADMIN account
+  // (events@confette.co) — NOT the organiser account.
   { file: "confette-admin.png", url: "https://confette.co/admin/dashboard" },
-  { file: "confette-events.png", url: "https://confette.co/admin/plans" },
+  { file: "confette-vendors.png", url: "https://confette.co/admin/vendors" },
 
   // Best captured with `npm run shots:snap` — navigate to the exact view (a
   // specific event's budget, or a pop-up modal) in the browser, then type the name:

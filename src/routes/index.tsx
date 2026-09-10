@@ -31,18 +31,6 @@ const stats = [
 
 const featured = [
   {
-    name: "Confette",
-    category: "Marketplace",
-    to: "/work/confette" as const,
-    line: "Nigeria's event-planning marketplace: a three-sided platform where organisers post a budget, split it across service categories, and receive competitive bids from verified vendors.",
-    chips: ["Organiser · Vendor · Admin portals", "Full bidding lifecycle", "Live at confette.co"],
-    stats: [
-      { v: "3", l: "Portals" },
-      { v: "6", l: "Lifecycle states" },
-      { v: "Live", l: "In market" },
-    ],
-  },
-  {
     name: "Glown",
     category: "Vertical SaaS",
     to: "/work/glown" as const,
@@ -52,6 +40,18 @@ const featured = [
       { v: "5", l: "Modules" },
       { v: "388", l: "Clients managed" },
       { v: "₦3.2M", l: "Monthly payroll" },
+    ],
+  },
+  {
+    name: "Confette",
+    category: "Marketplace",
+    to: "/work/confette" as const,
+    line: "Nigeria's event-planning marketplace: a three-sided platform where organisers post a budget, split it across service categories, and receive competitive bids from verified vendors.",
+    chips: ["Organiser · Vendor · Admin portals", "Full bidding lifecycle", "Live at confette.co"],
+    stats: [
+      { v: "3", l: "Portals" },
+      { v: "6", l: "Lifecycle states" },
+      { v: "Live", l: "In market" },
     ],
   },
 ];
