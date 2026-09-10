@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Reveal } from "./Reveal";
 
 /**
  * A framed product screenshot with a caption.
- * The image is preloaded; if the file is missing the component renders
- * nothing, so screenshots can be added to /public/shots one at a time
- * without ever showing a broken image.
+ * The image is rendered directly (present in the server HTML) so it shows as
+ * soon as it loads — no JS preload gate. If the file is genuinely missing the
+ * onError handler hides the whole figure, so screenshots can still be added to
+ * /public/shots one at a time without ever leaving a broken image on the page.
  */
 export function Shot({
   src,
@@ -16,24 +17,9 @@ export function Shot({
   alt: string;
   caption?: string;
 }) {
-  const [ok, setOk] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  useEffect(() => {
-    let active = true;
-    const img = new Image();
-    img.onload = () => {
-      if (active) setOk(true);
-    };
-    img.onerror = () => {
-      if (active) setOk(false);
-    };
-    img.src = src;
-    return () => {
-      active = false;
-    };
-  }, [src]);
-
-  if (!ok) return null;
+  if (failed) return null;
 
   return (
     <Reveal className="group my-2">
@@ -48,6 +34,7 @@ export function Shot({
             src={src}
             alt={alt}
             loading="lazy"
+            onError={() => setFailed(true)}
             className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           />
         </a>
