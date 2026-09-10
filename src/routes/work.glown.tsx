@@ -126,6 +126,16 @@ function GlownPage() {
           alt="Glown payroll page showing monthly payroll totals with gross, deductions, and net."
           caption="Payroll: monthly runs built from per-booking commission, plus salary, allowances, and deductions."
         />
+        <Shot
+          src="/shots/glown-payroll-detail.png"
+          alt="Glown salary breakdown for a single month showing each staff member's gross, salary, commission, allowances, deductions, and net total."
+          caption="Inside a run: every staff member's gross broken into salary, commission, allowances, and deductions."
+        />
+        <Shot
+          src="/shots/glown-commission.png"
+          alt="Glown staff earnings detail listing commission earned from individual completed bookings."
+          caption="And it all traces back: each staff member's pay is built from commission on individual completed bookings."
+        />
       </CaseSection>
 
       <CaseSection heading="Key decisions">
