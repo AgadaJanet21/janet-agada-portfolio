@@ -424,7 +424,9 @@ function Index() {
                 LinkedIn <ArrowUpRight className="size-4" />
               </a>
               <a
-                href="#"
+                href="/Janet-Agada-Resume.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
               >
                 Download Résumé

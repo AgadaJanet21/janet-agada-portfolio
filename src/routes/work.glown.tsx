@@ -74,9 +74,9 @@ function GlownPage() {
       meta="Role: Product Manager (built from zero) · Market: Nigeria · Stage: Live & expanding"
     >
       <Shot
-        src="/shots/glown-overview.png"
-        alt="Glown business dashboard showing today's appointments, revenue, and this month's bookings and new clients."
-        caption="The Glown dashboard: a salon's day and month at a glance."
+        src="/shots/glown-reviews.png"
+        alt="Glown reviews page showing a 4.8-star average with a rating breakdown and published client reviews."
+        caption="A 4.8-star average across clients, with per-staff ratings published to build the salon's reputation."
       />
 
       <CaseSection heading="Overview">
@@ -106,11 +106,6 @@ function GlownPage() {
       </CaseSection>
 
       <CaseSection heading="Inside the product">
-        <Shot
-          src="/shots/glown-reviews.png"
-          alt="Glown reviews page showing a 4.8-star average with a rating breakdown and published client reviews."
-          caption="Reviews: a 4.8-star average with per-staff ratings, published to build the salon's reputation."
-        />
         <Shot
           src="/shots/glown-marketing.png"
           alt="Glown marketing page showing client segments such as slipping away, best clients, and repeat no-shows."
