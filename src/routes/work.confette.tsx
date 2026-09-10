@@ -101,9 +101,9 @@ function ConfettePage() {
 
       <CaseSection heading="Inside the product">
         <Shot
-          src="/shots/confette-events.png"
-          alt="Confette all-events list showing events with budgets and statuses such as draft, open, and bidding."
-          caption="Every event and its status across the bidding lifecycle: Draft, Open, Bidding, and more."
+          src="/shots/confette-vendors.png"
+          alt="Confette admin vendors page showing vendor verification with pending, verified, and suspended states and verify, reject, and suspend actions."
+          caption="Vendor trust & safety: admins verify, reject, and suspend vendors before they can bid, the layer the whole marketplace runs on."
         />
       </CaseSection>
 
