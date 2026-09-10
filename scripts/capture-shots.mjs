@@ -55,13 +55,42 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 
+// Detects the logged-out state (Glown/Confette login screens) so we never
+// save a login-page screenshot over a good one.
+async function looksLoggedOut() {
+  return await page
+    .evaluate(() => {
+      const t = document.body?.innerText || "";
+      return (
+        /Sign up\/Log in|Continue with Email|Continue with Google|Glown for business/i.test(t) ||
+        /\/(login|sign-?in|auth)(\/|\?|$)/i.test(location.pathname)
+      );
+    })
+    .catch(() => false);
+}
+
 if (needLogin) {
   await page.goto("https://app.glown.io/");
   await rl.question(
     "\n>>> Log in to BOTH Glown and Confette in the browser window.\n" +
-      ">>> (open confette.co in the same window and log in there too)\n" +
+      ">>> - Glown: make sure you land on the Cyré HQ dashboard (NOT the login screen)\n" +
+      ">>> - Confette: open confette.co and log in as the ADMIN account (events@confette.co)\n" +
       ">>> Then come back here and press ENTER to save your login...\n",
   );
+
+  // Verify both sessions actually took, so we don't save a logged-out state.
+  await page.goto("https://app.glown.io/overview", { waitUntil: "domcontentloaded" }).catch(() => {});
+  await page.waitForTimeout(2500);
+  const glownOut = await looksLoggedOut();
+  await page.goto("https://confette.co/admin/dashboard", { waitUntil: "domcontentloaded" }).catch(() => {});
+  await page.waitForTimeout(2500);
+  const confetteOut = await looksLoggedOut();
+  console.log(`  Glown login:    ${glownOut ? "NOT DETECTED - captures will be login pages" : "OK"}`);
+  console.log(`  Confette login: ${confetteOut ? "NOT DETECTED" : "OK"}`);
+  if (glownOut || confetteOut) {
+    console.log(">>> One or both aren't logged in. Fix it in the browser, then re-run `npm run shots:login`.");
+  }
+
   await context.storageState({ path: STATE });
   console.log("Login saved to scripts/.auth.json (gitignored — do not share it).");
 }
@@ -86,6 +115,10 @@ if (args.has("--snap")) {
         .goto(s.url, { waitUntil: "networkidle", timeout: 30000 })
         .catch(() => page.goto(s.url, { waitUntil: "domcontentloaded" }));
       await page.waitForTimeout(s.settle ?? 4000); // let fonts + animations settle
+      if (await looksLoggedOut()) {
+        console.log("SKIPPED", s.file, "- login page (session expired); kept the existing file");
+        continue;
+      }
       await page.screenshot({ path: join(OUT, s.file), fullPage: !!s.fullPage });
       console.log("captured", s.file);
     } catch (e) {
