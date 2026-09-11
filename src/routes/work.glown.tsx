@@ -4,6 +4,7 @@ import {
   CaseSection,
   Prose,
   DecisionBlock,
+  MyRole,
 } from "@/components/CaseStudy";
 import { Shot } from "@/components/Shot";
 
@@ -77,6 +78,17 @@ function GlownPage() {
         src="/shots/glown-reviews.png"
         alt="Glown reviews page showing a 4.8-star average with a rating breakdown and published client reviews."
         caption="A 4.8-star average across clients, with per-staff ratings published to build the salon's reputation."
+      />
+
+      <MyRole
+        lead="End-to-end product owner. I took Glown from an undefined problem to a live platform, from zero."
+        items={[
+          "Defined the problem and architected the full system before any code was written.",
+          "Made the service-first booking decision that shaped the entire platform structure.",
+          "Wrote every PRD, user flow, and edge-case spec; engineering shipped with minimal clarification.",
+          "Designed the commission-to-payroll logic that connects each completed booking to staff pay.",
+          "Coordinated engineering day to day, and owned QA and launch.",
+        ]}
       />
 
       <CaseSection heading="Overview">

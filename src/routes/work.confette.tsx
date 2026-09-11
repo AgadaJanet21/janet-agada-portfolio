@@ -6,6 +6,7 @@ import {
   CaseSection,
   Prose,
   DecisionBlock,
+  MyRole,
 } from "@/components/CaseStudy";
 import { Shot } from "@/components/Shot";
 
@@ -71,6 +72,17 @@ function ConfettePage() {
         src="/shots/confette-admin.png"
         alt="Confette admin dashboard showing total events, live events, total bids, and vendors, with a recent events list."
         caption="The admin portal: platform oversight across events, bids, and vendors."
+      />
+
+      <MyRole
+        lead="Product owner and architect, and I built the frontend myself."
+        items={[
+          "Defined the problem and architected the three-sided marketplace end to end.",
+          "Modelled the entire bidding lifecycle as a state machine, specifying every guard, transition, and edge case.",
+          "Designed the vendor trust-and-safety cascades: verification, suspension, and counter-bid budget guards.",
+          "Built the product's frontend myself with AI-assisted development.",
+          "Coordinated engineering and drove it to launch.",
+        ]}
       />
 
       <CaseSection heading="Overview">

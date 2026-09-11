@@ -76,6 +76,25 @@ export function Prose({ children }: { children: ReactNode }) {
   return <p className="text-base leading-8 text-foreground/85 sm:text-lg">{children}</p>;
 }
 
+export function MyRole({ lead, items }: { lead: string; items: string[] }) {
+  return (
+    <Reveal as="section" className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+      <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+        My role
+      </h2>
+      <p className="mt-3 text-base font-medium leading-8 text-foreground sm:text-lg">{lead}</p>
+      <ul className="mt-4 space-y-2.5">
+        {items.map((it) => (
+          <li key={it} className="flex gap-3 text-base leading-7 text-muted-foreground">
+            <span className="mt-[0.6rem] size-1.5 shrink-0 rounded-full bg-primary" />
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+    </Reveal>
+  );
+}
+
 export function DecisionBlock({
   index,
   title,
