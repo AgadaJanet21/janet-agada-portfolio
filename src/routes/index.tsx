@@ -341,6 +341,38 @@ function Index() {
           </div>
         </Section>
 
+        {/* HOW I BUILD */}
+        <Section id="build" eyebrow="Hands-on" title="How I build">
+          <Reveal>
+            <p className="max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+              I don't just spec products, I build them. I design the system, write the PRDs, then
+              prototype and ship the actual frontend, so I hand engineers a working reference instead
+              of a wireframe and stay fluent in what's really feasible. I built Confette's frontend
+              this way.
+            </p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <Reveal>
+              <article className="h-full rounded-2xl border border-border bg-card p-6">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Frontend I build in
+                </p>
+                <p className="mt-3 text-base font-medium">React · Tailwind CSS · Paystack</p>
+              </article>
+            </Reveal>
+            <Reveal delay={80}>
+              <article className="h-full rounded-2xl border border-border bg-card p-6">
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  Built with AI-native tooling
+                </p>
+                <p className="mt-3 text-base font-medium">
+                  Claude · Cursor · Lovable · Magicpatterns
+                </p>
+              </article>
+            </Reveal>
+          </div>
+        </Section>
+
         {/* TOOLS */}
         <Section title="Tools I work with">
           <Reveal>
