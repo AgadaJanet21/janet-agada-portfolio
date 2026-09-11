@@ -68,12 +68,6 @@ function ConfettePage() {
       liveHref="https://confette.co"
       meta="Role: Product Manager & Product Architect · Market: Nigeria · Roles served: Organiser, Vendor, Admin · Stage: Live"
     >
-      <Shot
-        src="/shots/confette-admin.png"
-        alt="Confette admin dashboard showing total events, live events, total bids, and vendors, with a recent events list."
-        caption="The admin portal: platform oversight across events, bids, and vendors."
-      />
-
       <MyRole
         lead="Product owner and architect, and I built the frontend myself."
         items={[
@@ -83,6 +77,12 @@ function ConfettePage() {
           "Built the product's frontend myself with AI-assisted development.",
           "Coordinated engineering and drove it to launch.",
         ]}
+      />
+
+      <Shot
+        src="/shots/confette-admin.png"
+        alt="Confette admin dashboard showing total events, live events, total bids, and vendors, with a recent events list."
+        caption="The admin portal: platform oversight across events, bids, and vendors."
       />
 
       <CaseSection heading="Overview">

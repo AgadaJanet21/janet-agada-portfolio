@@ -74,12 +74,6 @@ function GlownPage() {
       liveHref="https://glown.io"
       meta="Role: Product Manager (built from zero) · Market: Nigeria · Stage: Live & expanding"
     >
-      <Shot
-        src="/shots/glown-reviews.png"
-        alt="Glown reviews page showing a 4.8-star average with a rating breakdown and published client reviews."
-        caption="A 4.8-star average across clients, with per-staff ratings published to build the salon's reputation."
-      />
-
       <MyRole
         lead="Glown started as an idea, and I've owned it end to end ever since, from zero to live and still shaping it."
         items={[
@@ -89,6 +83,12 @@ function GlownPage() {
           "Designed the commission-to-payroll logic that connects each completed booking to staff pay.",
           "Run the ongoing refinement loop, turning how real salons use the app into the next release.",
         ]}
+      />
+
+      <Shot
+        src="/shots/glown-reviews.png"
+        alt="Glown reviews page showing a 4.8-star average with a rating breakdown and published client reviews."
+        caption="A 4.8-star average across clients, with per-staff ratings published to build the salon's reputation."
       />
 
       <CaseSection heading="Overview">

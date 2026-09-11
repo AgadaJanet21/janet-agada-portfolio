@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
 import type { ReactNode } from "react";
 import { SiteNav } from "./SiteNav";
 import { SiteFooter } from "./SiteFooter";
@@ -78,15 +78,15 @@ export function Prose({ children }: { children: ReactNode }) {
 
 export function MyRole({ lead, items }: { lead: string; items: string[] }) {
   return (
-    <Reveal as="section" className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-      <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-        My role
-      </h2>
-      <p className="mt-3 text-base font-medium leading-8 text-foreground sm:text-lg">{lead}</p>
-      <ul className="mt-4 space-y-2.5">
+    <Reveal as="section" className="rounded-3xl border border-primary/20 bg-primary/[0.04] p-7 sm:p-10">
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">My role</p>
+      <p className="mt-4 max-w-3xl text-xl font-semibold leading-8 text-foreground sm:text-[1.7rem] sm:leading-10">
+        {lead}
+      </p>
+      <ul className="mt-8 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
         {items.map((it) => (
-          <li key={it} className="flex gap-3 text-base leading-7 text-muted-foreground">
-            <span className="mt-[0.6rem] size-1.5 shrink-0 rounded-full bg-primary" />
+          <li key={it} className="flex gap-3 text-base leading-7 text-foreground/80">
+            <Check className="mt-1 size-4 shrink-0 text-primary" strokeWidth={2.5} />
             <span>{it}</span>
           </li>
         ))}
