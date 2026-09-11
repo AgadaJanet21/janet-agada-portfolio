@@ -164,7 +164,11 @@ function Index() {
       <SiteNav />
       <main className="pt-20">
         {/* HERO */}
-        <section className="py-16 sm:py-28">
+        <section className="relative isolate overflow-hidden py-16 sm:py-28">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute right-[-8%] top-[-18%] -z-10 h-[34rem] w-[34rem] rounded-full bg-primary/15 blur-[130px] motion-safe:animate-[drift_16s_ease-in-out_infinite]"
+          />
           <div className="container-editorial">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
@@ -420,7 +424,7 @@ function Index() {
         {/* WORKING TOGETHER */}
         <Section title="What you get when we work together">
           <Reveal>
-            <p className="max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+            <p className="text-base leading-8 text-muted-foreground sm:text-lg">
               My experience spans fast-moving startups across Nigeria and international teams. I've
               architected multi-module platforms, launched 0→1 products, and shipped AI-powered
               tools. I bring structure to ambiguity, and I know how to coordinate engineering teams
@@ -446,7 +450,7 @@ function Index() {
             <h2 className="max-w-3xl text-3xl font-semibold sm:text-4xl md:text-5xl">
               Ready to build something great?
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
+            <p className="mt-6 text-base leading-8 text-muted-foreground sm:text-lg">
               Open to full-time remote Product Manager roles and 0→1 product partnerships with
               ambitious teams globally.
             </p>
