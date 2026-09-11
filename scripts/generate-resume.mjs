@@ -11,15 +11,15 @@ const OUT = join(__dirname, "..", "public", "Janet-Agada-Resume.pdf");
 const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: "Segoe UI", -apple-system, Roboto, Helvetica, Arial, sans-serif;
-         color: #1a1a1a; font-size: 9.9pt; line-height: 1.38; -webkit-print-color-adjust: exact; }
+         color: #1a1a1a; font-size: 9.9pt; line-height: 1.34; -webkit-print-color-adjust: exact; }
   .name { font-family: Georgia, "Times New Roman", serif; font-size: 25pt; font-weight: 700; letter-spacing: -0.5px; }
   .role { color: #4F46E5; font-weight: 600; font-size: 10.5pt; margin-top: 2px; }
   .contact { color: #666; font-size: 8.7pt; margin-top: 7px; }
   .contact a { color: #4F46E5; text-decoration: none; }
   h2 { font-size: 8.2pt; text-transform: uppercase; letter-spacing: 1.5px; color: #4F46E5;
-       margin: 12px 0 6px; padding-bottom: 3px; border-bottom: 1px solid #e6e6e6; }
+       margin: 9px 0 5px; padding-bottom: 3px; border-bottom: 1px solid #e6e6e6; }
   .summary { color: #333; }
-  .entry { margin-top: 8px; }
+  .entry { margin-top: 6px; }
   .entry .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .entry .title { font-weight: 700; font-size: 10.4pt; }
   .entry .title span { color: #4F46E5; font-weight: 600; font-size: 9.5pt; }
@@ -93,8 +93,11 @@ await page.pdf({
   path: OUT,
   format: "A4",
   printBackground: true,
-  margin: { top: "12mm", bottom: "12mm", left: "13mm", right: "13mm" },
+  margin: { top: "10mm", bottom: "10mm", left: "12mm", right: "12mm" },
 });
+// Measure at the real A4 print-column width (210mm - 26mm margins ~= 696px @96dpi)
+// so wrapping matches the PDF. One A4 page usable height ~= 1031px.
+await page.setViewportSize({ width: 703, height: 1200 });
 const h = await page.evaluate(() => document.body.scrollHeight);
 await browser.close();
-console.log("wrote", OUT, "| content height ~", h, "px (one page if < ~1000)");
+console.log("wrote", OUT, "| A4 content height ~", h, "px (fits one page if <= ~1047)");
