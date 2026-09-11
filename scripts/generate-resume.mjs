@@ -81,6 +81,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   </div>
 
   <h2>Education</h2>
+  <p><b>Master of Public Health</b>, Bingham University, Nigeria</p>
   <p><b>Bachelor of Science</b>, Kaduna State University, Nigeria</p>
 </body></html>`;
 
