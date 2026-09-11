@@ -78,15 +78,15 @@ export function Prose({ children }: { children: ReactNode }) {
 
 export function MyRole({ lead, items }: { lead: string; items: string[] }) {
   return (
-    <Reveal as="section" className="rounded-3xl border border-primary/20 bg-primary/[0.04] p-7 sm:p-10">
-      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">My role</p>
-      <p className="mt-4 max-w-3xl text-xl font-semibold leading-8 text-foreground sm:text-[1.7rem] sm:leading-10">
+    <Reveal as="section" className="rounded-2xl border border-primary/20 bg-primary/[0.04] p-6 sm:p-7">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">My role</p>
+      <p className="mt-3 max-w-3xl text-lg font-semibold leading-7 text-foreground sm:text-xl sm:leading-8">
         {lead}
       </p>
-      <ul className="mt-8 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
+      <ul className="mt-5 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
         {items.map((it) => (
-          <li key={it} className="flex gap-3 text-base leading-7 text-foreground/80">
-            <Check className="mt-1 size-4 shrink-0 text-primary" strokeWidth={2.5} />
+          <li key={it} className="flex gap-2.5 text-sm leading-6 text-foreground/80 sm:text-[0.95rem]">
+            <Check className="mt-0.5 size-4 shrink-0 text-primary" strokeWidth={2.5} />
             <span>{it}</span>
           </li>
         ))}
