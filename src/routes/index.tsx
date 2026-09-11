@@ -303,9 +303,11 @@ function Index() {
                         </p>
                       </div>
                       <div>
-                        <p className="font-display text-2xl font-semibold sm:text-3xl">Phase 1</p>
+                        <p className="font-display text-2xl font-semibold sm:text-3xl">
+                          <CountUp value="4" />
+                        </p>
                         <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                          Live
+                          Modules live
                         </p>
                       </div>
                     </div>

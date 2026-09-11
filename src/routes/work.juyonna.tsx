@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 const TITLE = "Juyonna Case Study · Janet Agada, Product Manager";
 const DESCRIPTION =
-  "How I architected Juyonna as a modular travel ecosystem: 10+ service verticals on one shared core, a partner-aware payment engine, and a rolling, revenue-first launch strategy.";
+  "How I structured Juyonna as a modular travel and logistics platform: separate service modules on one shared core, a partner-aware payment setup, and a launch that ships in pieces.";
 
 export const Route = createFileRoute("/work/juyonna")({
   head: () => ({
@@ -23,7 +23,6 @@ const modules = [
   { name: "Travel Insurance", live: true },
   { name: "Cargo & Logistics", live: true },
   { name: "Study Abroad", live: true },
-  { name: "Dashboard", live: true },
   { name: "Flights", live: false },
   { name: "Hotels", live: false },
   { name: "Visa Assistance", live: false },
@@ -35,23 +34,18 @@ const modules = [
 const decisions = [
   {
     n: "1",
-    title: "Modular, not monolithic",
-    body: "I chose to build Juyonna as independent modules on a shared core rather than one monolith. That single decision converted a potential 12-month big-bang launch into a rolling strategy where each vertical ships and earns revenue as soon as it is ready.",
+    title: "Modular instead of one big build",
+    body: "I built Juyonna as separate modules on a shared core rather than one monolith, so a service could launch as soon as it was ready instead of waiting for everything to be finished at once.",
   },
   {
     n: "2",
-    title: "A partner-aware payment engine",
-    body: "I designed the payment architecture around a Paystack gateway with percentage-based fee logic that varies per partner, real-time currency conversion for international services, and offline reconciliation for money that moves outside the gateway.",
+    title: "Payments that handle real complications",
+    body: "I designed the payment setup around Paystack with fees that vary by partner, currency conversion for international services, and a way to reconcile payments made offline, outside the gateway.",
   },
   {
     n: "3",
-    title: "Real partners behind every vertical",
-    body: "Each service plugs into real providers, GIG and Africanies for cargo and logistics, ANCHOR and Tangerine for insurance underwriting, coursefinder.ai for study-abroad matching, all normalised behind the core so the product experience stays consistent.",
-  },
-  {
-    n: "4",
-    title: "One core, many fronts",
-    body: "Authentication, payments, notifications, and the data model live once in the core, so every new vertical inherits them instead of rebuilding them. That is what makes the rolling launch genuinely cheap to extend.",
+    title: "Real partners behind each service",
+    body: "Each module connects to actual providers, for logistics, insurance underwriting, and study-abroad matching, handled behind the shared core so the experience stays consistent across services.",
   },
 ];
 
@@ -62,41 +56,40 @@ function JuyonnaPage() {
       category="Travel Platform"
       liveLabel="juyonna.com"
       liveHref="https://juyonna.com"
-      meta="Role: Product Manager & Platform Architect · Employer: TM Labs (contract) · Market: Nigeria + International · Stage: Phase 1 live"
+      meta="Role: Product Manager & Platform Architect · Employer: TM Labs (contract) · Market: Nigeria + International · Stage: Live, 4 core modules shipped"
     >
       <MyRole
-        lead="Product Manager and platform architect. I designed Juyonna's architecture and drove Phase 1 to live."
+        lead="Product Manager and platform architect. I designed the architecture and shipped Phase 1."
         items={[
-          "Architected the modular platform: 10+ service verticals on one shared core infrastructure layer.",
-          "Made the modular-over-monolithic call that turned a 12-month launch into a rolling, revenue-first strategy.",
-          "Designed the payment architecture: Paystack, partner-specific fee logic, currency conversion, and offline reconciliation.",
-          "Coordinated multi-partner API integrations across logistics, insurance underwriting, and study-abroad matching.",
-          "Documented specifications in Notion and ran delivery through Figma and Trello.",
+          "Designed the platform as separate modules on one shared core, so services can launch one at a time.",
+          "Shipped Phase 1: four core modules live, Protocol, Travel Insurance, Cargo & Logistics, and Study Abroad.",
+          "Designed the payment setup: Paystack, partner-specific fees, currency conversion, and offline reconciliation.",
+          "Coordinated the API integrations with real partners for logistics, insurance, and study-abroad matching.",
+          "Wrote the specs in Notion and ran delivery in Figma and Trello.",
         ]}
       />
 
       <CaseSection heading="Overview">
         <Prose>
-          Juyonna is a modular, multi-service travel ecosystem: one platform that unifies 10+
-          independent travel and logistics services, from airport protocol and travel insurance to
-          cargo, study-abroad support, flights, and more. I owned the architecture and product for TM
-          Labs and delivered Phase 1 live at juyonna.com.
+          Juyonna is a travel and logistics platform that brings multiple services together in one
+          app. It's built as separate modules on a shared foundation, so each service can go live on
+          its own. I designed the architecture and shipped Phase 1: four core modules, live at
+          juyonna.com.
         </Prose>
       </CaseSection>
 
       <CaseSection heading="The problem">
         <Prose>
-          Travel and logistics in the region are fragmented across dozens of separate providers and
-          point solutions. Building all of it as one monolith would mean a year of work before
-          anything shipped or earned. The real problem was structural: how do you launch a broad
-          ecosystem without betting everything on a single, distant big-bang release?
+          Travel and logistics here are spread across a lot of separate providers. Building every
+          service at once would take a year before anything was usable. The question I had to answer
+          was how to launch a broad platform in pieces, without waiting on one huge release.
         </Prose>
       </CaseSection>
 
-      <CaseSection heading="The architecture I designed">
+      <CaseSection heading="The architecture">
         <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            10+ service verticals, one shared core
+            Service modules, one shared core
           </p>
           <div className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
             {modules.map((m) => (
@@ -118,22 +111,21 @@ function JuyonnaPage() {
             <span className="font-medium text-foreground">Shared core</span>
             <span className="text-muted-foreground">
               {" "}
-              · authentication · partner-aware payments · notifications · multi-partner APIs · one
-              data model
+              · authentication · payments · notifications · partner APIs · one data model · the app
+              shell (dashboard, profile, settings)
             </span>
           </div>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground">
             <span className="inline-flex items-center gap-2">
-              <span className="size-1.5 rounded-full bg-primary" /> Live in Phase 1
+              <span className="size-1.5 rounded-full bg-primary" /> Live now
             </span>
             <span className="inline-flex items-center gap-2">
-              <span className="size-1.5 rounded-full border border-muted-foreground/50" /> On the
-              roadmap
+              <span className="size-1.5 rounded-full border border-muted-foreground/50" /> Planned
             </span>
           </div>
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            Every vertical is an independent module on one shared core, so the platform ships and
-            earns one service at a time instead of waiting on a 12-month big-bang launch.
+            Each service is its own module on one shared core, so a new one ships without rebuilding
+            the basics. Four are live so far; the rest slot onto the same core.
           </p>
         </div>
       </CaseSection>
@@ -148,18 +140,17 @@ function JuyonnaPage() {
 
       <CaseSection heading="Outcome">
         <Prose>
-          Phase 1 shipped live with five modules, Protocol Services, Travel Insurance, Cargo &
-          Logistics, Study Abroad, and the Dashboard, all running on the shared core with real
-          payment processing and live partner integrations. The remaining verticals roll out on the
-          same foundation. Live at juyonna.com.
+          Phase 1 is live with four core modules, Protocol Services, Travel Insurance, Cargo &
+          Logistics, and Study Abroad, running on the shared core with real payments and live partner
+          integrations. The remaining services roll out on the same foundation. Live at juyonna.com.
         </Prose>
       </CaseSection>
 
       <CaseSection heading="What this demonstrates">
         <Prose>
-          Platform-level architecture thinking: designing for modularity, shared infrastructure, and
-          a launch strategy that produces revenue early instead of risk late. This is the systems and
-          business judgment that turns a broad idea into something that actually ships.
+          Designing a platform to grow in pieces: shared infrastructure, modules that ship on their
+          own, and the payment and partner plumbing to back them. It's how you launch something broad
+          without betting everything on one release.
         </Prose>
       </CaseSection>
     </CaseStudyLayout>

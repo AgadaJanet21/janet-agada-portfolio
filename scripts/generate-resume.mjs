@@ -61,7 +61,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
     <div class="top"><div class="title">TM Labs <span>&middot; Product Manager</span></div><div class="meta">Contract &middot; Hybrid, Abuja &middot; Jun 2025 &ndash; Apr 2026</div></div>
     <ul>
       <li><b>Confette</b> (confette.co): Nigeria's three-sided event marketplace (organiser, vendor, admin). Modelled the full bidding lifecycle as a state machine (Draft &rarr; Open &rarr; Bidding &rarr; Vendors Booked &rarr; Completed, plus Disputed), and designed vendor trust &amp; safety, verification, suspension cascades, and counter-bid budget guards that prevent silent over-commitment.</li>
-      <li><b>Juyonna</b> (juyonna.com): a modular multi-service travel ecosystem, Phase 1 live (5 modules). Architected 10+ verticals on one core layer, choosing modular over monolithic to turn a 12-month launch into rolling revenue; designed the payment architecture (Paystack, partner-specific fees, currency conversion, offline reconciliation).</li>
+      <li><b>Juyonna</b> (juyonna.com): a modular multi-service travel and logistics platform, Phase 1 live with 4 core modules. Designed 10+ services as separate modules on one shared core so each ships on its own; built the payment setup (Paystack, partner-specific fees, currency conversion, offline reconciliation).</li>
     </ul>
   </div>
 
