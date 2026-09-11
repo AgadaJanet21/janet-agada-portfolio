@@ -81,6 +81,7 @@ function GlownPage() {
           "Made the service-first booking decision that shaped the entire platform structure.",
           "Wrote every PRD, user flow, and edge-case spec; engineering shipped with minimal clarification.",
           "Designed the commission-to-payroll logic that connects each completed booking to staff pay.",
+          "Coordinated the engineering team day to day, and owned QA through to launch.",
           "Run the ongoing refinement loop, turning how real salons use the app into the next release.",
         ]}
       />
