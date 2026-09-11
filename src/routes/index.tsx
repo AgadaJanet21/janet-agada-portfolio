@@ -107,9 +107,11 @@ const tools = [
   "Google Docs",
   "Jira",
   "Trello",
+  "Asana",
   "Figma",
   "Lovable",
   "Cursor",
+  "Playwright",
   "ChatGPT",
   "Claude",
   "Magicpatterns",
@@ -166,7 +168,7 @@ function Index() {
           <div className="container-editorial">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
-                <span className="size-1.5 rounded-full bg-primary" />
+                <span className="size-1.5 rounded-full bg-primary motion-safe:animate-pulse" />
                 Product Manager · 0→1 Products
               </span>
             </Reveal>
@@ -355,7 +357,7 @@ function Index() {
         {/* HOW I BUILD */}
         <Section id="build" eyebrow="Hands-on" title="How I build">
           <Reveal>
-            <p className="max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+            <p className="text-base leading-8 text-muted-foreground sm:text-lg">
               I don't just spec products, I build them. I design the system, write the PRDs, then
               prototype and ship the actual frontend, so I hand engineers a working reference instead
               of a wireframe and stay fluent in what's really feasible. I built Confette's frontend
@@ -386,18 +388,15 @@ function Index() {
 
         {/* TOOLS */}
         <Section title="Tools I work with">
-          <Reveal>
-            <div className="flex flex-wrap gap-3">
-              {tools.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground"
-                >
+          <div className="flex flex-wrap gap-3">
+            {tools.map((t, i) => (
+              <Reveal key={t} delay={i * 35}>
+                <span className="inline-block cursor-default rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/30 hover:text-primary hover:shadow-lift">
                   {t}
                 </span>
-              ))}
-            </div>
-          </Reveal>
+              </Reveal>
+            ))}
+          </div>
         </Section>
 
         {/* TESTIMONIALS */}

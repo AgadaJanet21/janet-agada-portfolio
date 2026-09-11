@@ -72,6 +72,7 @@ function ConfettePage() {
         lead="Product owner and architect, and I built the frontend myself."
         items={[
           "Defined the problem and architected the three-sided marketplace end to end.",
+          "Designed budget-first planning, where organisers set a total budget and split it across categories before any vendor bids.",
           "Modelled the entire bidding lifecycle as a state machine, specifying every guard, transition, and edge case.",
           "Designed the vendor trust-and-safety cascades: verification, suspension, and counter-bid budget guards.",
           "Built the product's frontend myself with AI-assisted development.",

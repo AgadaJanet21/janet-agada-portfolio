@@ -65,6 +65,7 @@ function JuyonnaPage() {
           "Shipped Phase 1: four core modules live, Protocol, Travel Insurance, Cargo & Logistics, and Study Abroad.",
           "Designed the payment setup: Paystack, partner-specific fees, currency conversion, and offline reconciliation.",
           "Coordinated the API integrations with real partners for logistics, insurance, and study-abroad matching.",
+          "Owned QA and launch readiness for each module before it went live.",
           "Wrote the specs in Notion and ran delivery in Figma and Trello.",
         ]}
       />
