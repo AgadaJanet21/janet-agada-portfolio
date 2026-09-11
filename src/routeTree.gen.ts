@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkConfetteRouteImport } from './routes/work.confette'
 import { Route as WorkGlownRouteImport } from './routes/work.glown'
+import { Route as WorkJuyonnaRouteImport } from './routes/work.juyonna'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,44 @@ const WorkGlownRoute = WorkGlownRouteImport.update({
   path: '/work/glown',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkJuyonnaRoute = WorkJuyonnaRouteImport.update({
+  id: '/work/juyonna',
+  path: '/work/juyonna',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/work/confette': typeof WorkConfetteRoute
   '/work/glown': typeof WorkGlownRoute
+  '/work/juyonna': typeof WorkJuyonnaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/work/confette': typeof WorkConfetteRoute
   '/work/glown': typeof WorkGlownRoute
+  '/work/juyonna': typeof WorkJuyonnaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/work/confette': typeof WorkConfetteRoute
   '/work/glown': typeof WorkGlownRoute
+  '/work/juyonna': typeof WorkJuyonnaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/work/confette' | '/work/glown'
+  fullPaths: '/' | '/work/confette' | '/work/glown' | '/work/juyonna'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/work/confette' | '/work/glown'
-  id: '__root__' | '/' | '/work/confette' | '/work/glown'
+  to: '/' | '/work/confette' | '/work/glown' | '/work/juyonna'
+  id: '__root__' | '/' | '/work/confette' | '/work/glown' | '/work/juyonna'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   WorkConfetteRoute: typeof WorkConfetteRoute
   WorkGlownRoute: typeof WorkGlownRoute
+  WorkJuyonnaRoute: typeof WorkJuyonnaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +92,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkGlownRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/juyonna': {
+      id: '/work/juyonna'
+      path: '/work/juyonna'
+      fullPath: '/work/juyonna'
+      preLoaderRoute: typeof WorkJuyonnaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   WorkConfetteRoute: WorkConfetteRoute,
   WorkGlownRoute: WorkGlownRoute,
+  WorkJuyonnaRoute: WorkJuyonnaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

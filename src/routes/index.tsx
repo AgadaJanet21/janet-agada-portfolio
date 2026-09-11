@@ -271,10 +271,16 @@ function Index() {
             ))}
 
             <Reveal delay={180}>
-              <article className="rounded-2xl border border-border bg-card p-7 sm:p-10">
+              <Link
+                to="/work/juyonna"
+                className="group block rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-lift sm:p-10"
+              >
                 <div className="grid gap-8 md:grid-cols-[1fr_15rem] md:gap-12">
                   <div>
-                    <Pill>Travel Platform</Pill>
+                    <div className="flex items-center justify-between gap-4">
+                      <Pill>Travel Platform</Pill>
+                      <ArrowUpRight className="size-6 shrink-0 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary md:hidden" />
+                    </div>
                     <h3 className="mt-5 text-3xl font-semibold sm:text-4xl">Juyonna</h3>
                     <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
                       A modular, multi-service travel ecosystem with 10+ service verticals unified
@@ -282,27 +288,30 @@ function Index() {
                     </p>
                     <p className="mt-7 text-sm text-muted-foreground">
                       Industry: Travel &amp; Logistics · Market: Nigeria + International · Stage:
-                      Phase 1 complete, awaiting launch.
+                      Phase 1 live.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-6 border-t border-border pt-6 md:flex md:flex-col md:gap-5 md:border-l md:border-t-0 md:pl-10 md:pt-0 md:text-right">
-                    <div>
-                      <p className="font-display text-2xl font-semibold sm:text-3xl">
-                        <CountUp value="10+" />
-                      </p>
-                      <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                        Service verticals
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-display text-2xl font-semibold sm:text-3xl">Phase 1</p>
-                      <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-                        Complete
-                      </p>
+                  <div className="flex flex-col gap-6 border-t border-border pt-6 md:items-end md:border-l md:border-t-0 md:pl-10 md:pt-0">
+                    <ArrowUpRight className="hidden size-6 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary md:block" />
+                    <div className="grid grid-cols-2 gap-6 md:mt-auto md:flex md:flex-col md:gap-5 md:text-right">
+                      <div>
+                        <p className="font-display text-2xl font-semibold sm:text-3xl">
+                          <CountUp value="10+" />
+                        </p>
+                        <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                          Service verticals
+                        </p>
+                      </div>
+                      <div>
+                        <p className="font-display text-2xl font-semibold sm:text-3xl">Phase 1</p>
+                        <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                          Live
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           </div>
         </Section>
