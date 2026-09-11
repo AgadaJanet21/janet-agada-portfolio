@@ -81,13 +81,13 @@ function GlownPage() {
       />
 
       <MyRole
-        lead="End-to-end product owner. I took Glown from an undefined problem to a live platform, from zero."
+        lead="Glown started as an idea, and I've owned it end to end ever since, from zero to live and still shaping it."
         items={[
-          "Defined the problem and architected the full system before any code was written.",
+          "Shaped the product from the initial concept and design, through build, to live paying salons.",
           "Made the service-first booking decision that shaped the entire platform structure.",
           "Wrote every PRD, user flow, and edge-case spec; engineering shipped with minimal clarification.",
           "Designed the commission-to-payroll logic that connects each completed booking to staff pay.",
-          "Coordinated engineering day to day, and owned QA and launch.",
+          "Run the ongoing refinement loop, turning how real salons use the app into the next release.",
         ]}
       />
 
