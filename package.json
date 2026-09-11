@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "shots": "node scripts/capture-shots.mjs",
     "shots:login": "node scripts/capture-shots.mjs --login",
-    "shots:snap": "node scripts/capture-shots.mjs --snap"
+    "shots:snap": "node scripts/capture-shots.mjs --snap",
+    "resume": "node scripts/generate-resume.mjs"
   },
   "overrides": {
     "rolldown": "1.2.1"
