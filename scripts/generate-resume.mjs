@@ -78,7 +78,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   <div class="comp">
     <p><b>Product &amp; delivery:</b> 0&rarr;1 development &middot; problem definition &middot; roadmap &amp; go-to-market &middot; modular / system architecture &middot; API integration strategy &middot; data modelling &middot; PRDs, specifications &amp; edge-case documentation &middot; engineering coordination &middot; sprint management &middot; QA &amp; launch readiness &middot; user research.</p>
     <p><b>Technical:</b> builds and ships frontends in React &amp; Tailwind CSS (with Paystack payments) using AI-native tooling (Claude, Cursor, Lovable, Magicpatterns), so specs stay grounded in what is buildable.</p>
-    <p><b>Tools:</b> Notion &middot; Jira &middot; Trello &middot; Figma &middot; Slack &middot; Discord &middot; Lovable &middot; Cursor &middot; ChatGPT &middot; Claude &middot; Magicpatterns &middot; Paystack.</p>
+    <p><b>Tools:</b> Notion &middot; Google Docs &middot; Jira &middot; Trello &middot; Asana &middot; Figma &middot; Lovable &middot; Cursor &middot; Playwright &middot; ChatGPT &middot; Claude &middot; Magicpatterns &middot; Slack &middot; Discord &middot; Paystack.</p>
   </div>
 
   <h2>Education</h2>
