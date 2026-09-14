@@ -50,6 +50,13 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   </div>
 
   <div class="entry">
+    <div class="top"><div class="title">Celebration Church International <span>&middot; Product Manager (Volunteer)</span></div><div class="meta">Volunteer &middot; Remote &middot; Jul 2026 &ndash; Present</div></div>
+    <ul>
+      <li><b>Gamma</b>: own the CCI App backend for service scheduling, check-in codes, and member data.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
     <div class="top"><div class="title">Active Tech <span>&middot; Project Manager, Digital Products</span></div><div class="meta">Full-time &middot; Remote &middot; Dec 2025 &ndash; Present</div></div>
     <ul>
       <li><b>AmanaCruise</b> (amanacruise.com): ran user research and simplified complex cruise-booking flows for first-time travellers; managed the full cycle through QA and launch readiness.</li>
