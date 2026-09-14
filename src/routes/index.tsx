@@ -5,6 +5,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { Section, Pill } from "@/components/Section";
+import { CompanyLogos } from "@/components/CompanyLogos";
+import { ContactForm } from "@/components/ContactForm";
 
 const TITLE = "Janet Agada · Product Manager · 0→1 Products";
 const DESCRIPTION =
@@ -23,10 +25,10 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { value: "6", label: "Products shipped" },
-  { value: "6", label: "Industries covered" },
+  { value: "6+", label: "Products shipped" },
+  { value: "6+", label: "Industries covered" },
   { value: "25+", label: "Modules architected" },
-  { value: "4", label: "Live in market" },
+  { value: "4+", label: "Live in market" },
 ];
 
 const featured = [
@@ -133,6 +135,12 @@ const testimonials = [
     name: "Bright Ikhide",
     role: "Co-Founder, Glown",
   },
+  {
+    quote:
+      "Working with Janet is an absolute delight. She takes ownership on projects and is proactive in getting done what needs to be done without an extra nudge. She's a great team player and an insightful leader that balances team needs, empathy, and stakeholder requirements for the achievement of goals on any given project.",
+    name: "Ritchie Ngaro",
+    role: "TM Labs",
+  },
 ];
 
 const benefits = [
@@ -228,6 +236,11 @@ function Index() {
             ))}
           </div>
         </section>
+
+        {/* COMPANIES */}
+        <Section eyebrow="Track record" title="Companies I've worked with">
+          <CompanyLogos />
+        </Section>
 
         {/* SELECTED WORK */}
         <Section id="work" eyebrow="Case studies" title="Selected Work">
@@ -454,29 +467,35 @@ function Index() {
               Open to full-time remote Product Manager roles and 0→1 product partnerships with
               ambitious teams globally.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href="mailto:agadaejanet@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                <Mail className="size-4" /> agadaejanet@gmail.com
-              </a>
-              <a
-                href="https://www.linkedin.com/in/janet-agada-6a7372200"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
-              >
-                LinkedIn <ArrowUpRight className="size-4" />
-              </a>
-              <a
-                href="/Janet-Agada-Resume.pdf"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
-              >
-                Download Résumé
-              </a>
+            <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+              <ContactForm />
+              <div>
+                <p className="text-sm font-medium">Prefer to reach out directly?</p>
+                <div className="mt-5 flex flex-col gap-3">
+                  <a
+                    href="mailto:agadaejanet@gmail.com"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                  >
+                    <Mail className="size-4" /> agadaejanet@gmail.com
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/janet-agada-6a7372200"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
+                  >
+                    LinkedIn <ArrowUpRight className="size-4" />
+                  </a>
+                  <a
+                    href="/Janet-Agada-Resume.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
+                  >
+                    Download Résumé
+                  </a>
+                </div>
+              </div>
             </div>
           </Reveal>
         </Section>
