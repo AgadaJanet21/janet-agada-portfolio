@@ -15,6 +15,7 @@ const companies: Company[] = [
   { name: "AmanaCruise", logo: "amanacruise.png" },
   { name: "Traders College", logo: "traders-college.png" },
   { name: "TM Labs", logo: "tm-labs.svg" },
+  { name: "Celebration Church International", logo: "cci.webp" },
 ];
 
 function CompanyLogo({ company }: { company: Company }) {
@@ -60,7 +61,7 @@ function CompanyLogo({ company }: { company: Company }) {
 
 export function CompanyLogos() {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
       {companies.map((company) => (
         <CompanyLogo key={company.name} company={company} />
       ))}

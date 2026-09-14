@@ -60,6 +60,11 @@ const featured = [
 
 const moreWork = [
   {
+    name: "Celebration Church International",
+    tag: "Church Management",
+    line: "Product Manager (volunteer) for Gamma, the backend platform behind the CCI App: campuses generate check-in codes, schedule and manage services, and maintain member and attendance data at scale.",
+  },
+  {
     name: "Optima AI",
     tag: "Enterprise AI",
     line: "Coordinated engineering teams across time zones to ship an AI-powered document processing and analysis app for enterprise clients.",
