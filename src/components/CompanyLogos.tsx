@@ -2,28 +2,29 @@ import { useState } from "react";
 
 type Company = {
   name: string;
-  /** File in /public/logos, e.g. "glown.svg" or "glown.png". */
+  /** File in /public/logos, e.g. "glown.svg" or "amanacruise.png". */
   logo: string;
   url?: string;
 };
 
-// Drop the matching files into /public/logos to replace the text fallbacks.
+// Drop the matching files into /public/logos. Until a file exists, that
+// company shows a clean text wordmark instead of a broken image.
 const companies: Company[] = [
   { name: "Glown", logo: "glown.svg", url: "https://glown.io" },
   { name: "Confette", logo: "confette.svg", url: "https://confette.co" },
   { name: "Optima AI", logo: "optima-ai.svg" },
-  { name: "AmanaCruise", logo: "amanacruise.svg" },
-  { name: "Traders College", logo: "traders-college.svg" },
+  { name: "AmanaCruise", logo: "amanacruise.png" },
+  { name: "Traders College", logo: "traders-college.png" },
   { name: "TM Labs", logo: "tm-labs.svg" },
 ];
 
 function CompanyLogo({ company }: { company: Company }) {
-  // If the logo file isn't present yet, fall back to a clean text wordmark
-  // so the live site never shows a broken image.
+  // Fall back to a text wordmark if the logo file isn't present yet, so the
+  // live site never shows a broken image.
   const [failed, setFailed] = useState(false);
 
   const inner = failed ? (
-    <span className="font-display text-lg font-semibold tracking-tight text-muted-foreground transition-colors group-hover:text-foreground">
+    <span className="text-center font-display text-sm font-semibold tracking-tight text-muted-foreground">
       {company.name}
     </span>
   ) : (
@@ -32,24 +33,27 @@ function CompanyLogo({ company }: { company: Company }) {
       alt={`${company.name} logo`}
       loading="lazy"
       onError={() => setFailed(true)}
-      className="h-9 w-auto object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+      className="max-h-10 w-auto max-w-[85%] object-contain"
     />
   );
 
-  const className = "group flex h-12 items-center justify-center";
+  // White tiles normalize logos that have different shapes, colors, and
+  // background fills, so a mixed set still reads as one clean row.
+  const tile =
+    "flex h-24 items-center justify-center rounded-2xl border border-border bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift";
 
   return company.url ? (
     <a
       href={company.url}
       target="_blank"
       rel="noreferrer noopener"
-      className={className}
+      className={tile}
       aria-label={company.name}
     >
       {inner}
     </a>
   ) : (
-    <div className={className} aria-label={company.name}>
+    <div className={tile} aria-label={company.name}>
       {inner}
     </div>
   );
@@ -57,7 +61,7 @@ function CompanyLogo({ company }: { company: Company }) {
 
 export function CompanyLogos() {
   return (
-    <div className="grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-6">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
       {companies.map((company) => (
         <CompanyLogo key={company.name} company={company} />
       ))}
