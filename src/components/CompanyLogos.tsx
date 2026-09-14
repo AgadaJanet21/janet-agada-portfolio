@@ -11,8 +11,7 @@ type Company = {
 // company shows a clean text wordmark instead of a broken image.
 const companies: Company[] = [
   { name: "Glown", logo: "glown.svg", url: "https://glown.io" },
-  { name: "Confette", logo: "confette.svg", url: "https://confette.co" },
-  { name: "Optima AI", logo: "optima-ai.svg" },
+  { name: "Red Bracket", logo: "red-bracket.png" },
   { name: "AmanaCruise", logo: "amanacruise.png" },
   { name: "Traders College", logo: "traders-college.png" },
   { name: "TM Labs", logo: "tm-labs.svg" },
@@ -61,7 +60,7 @@ function CompanyLogo({ company }: { company: Company }) {
 
 export function CompanyLogos() {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
       {companies.map((company) => (
         <CompanyLogo key={company.name} company={company} />
       ))}
