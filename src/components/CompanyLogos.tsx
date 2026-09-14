@@ -15,7 +15,7 @@ const companies: Company[] = [
   { name: "AmanaCruise", logo: "amanacruise.png" },
   { name: "Traders College", logo: "traders-college.png" },
   { name: "TM Labs", logo: "tm-labs.svg" },
-  { name: "Celebration Church International", logo: "cci.webp" },
+  { name: "Celebration Church International", logo: "cci.svg" },
 ];
 
 function CompanyLogo({ company }: { company: Company }) {
